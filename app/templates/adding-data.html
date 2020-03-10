@@ -9,18 +9,26 @@
 <body>
 	<div class="container-contact100">
 		<div class="wrap-contact100">
-			<form class="contact100-form validate-form" action=http://127.0.0.1:5000\adding-data >
+			<form class="contact100-form validate-form" action=http://127.0.0.1:5000\success method="POST">
 				<span class="contact100-form-title">
 					Data Collector
 				</span>
 
+				<div class="wrap-input100 validate-input" data-validate="Name is required">
+					<input class="input100" type="text" name="age" placeholder="Age (yrs)">
+					<span class="focus-input100"></span>
+				</div>
 
+				<div class="wrap-input100 validate-input" data-validate="Name is required">
+					<input class="input100" type="text" name="country" placeholder="Country ">
+					<span class="focus-input100"></span>
+				</div>
 				<div class="container-contact100-form-btn">
 					<div class="wrap-contact100-form-btn">
 						<div class="contact100-form-bgbtn"></div>
 							<button class="contact100-form-btn" type="submit">
 								<span>
-								Add data
+								Submit
 								</span>
 							</button>
 					</div>

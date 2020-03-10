@@ -8,15 +8,25 @@ def index():
     return render_template("index.html")
 
 
-@app.route("/success", methods = ['POST'])
+@app.route("/adding-data")
+def add():
+    return render_template("adding-data.html")
+
+@app.route("/success", methods = ['GET', 'POST'])
 def success():
+    print("Hi")
     if(request.method == 'POST'):
         age_ = request.form['age']
         country_ = request.form['country']
         data = Data(age_,country_)
         db.session.add(data)
         db.session.commit()
-        return render_template("success.html")
+    return render_template("success.html")
+
+
+
+
+
 
 
 
